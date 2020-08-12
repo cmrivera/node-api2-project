@@ -7,7 +7,7 @@
   "scripts": {
     "server": "nodemon index.js",
     "start": "node index.js",
-    "watch": ""
+    "watch": "nodemon index.js"
   },
   "dependencies": {
     "express": "^4.17.1",
