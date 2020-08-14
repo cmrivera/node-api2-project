@@ -53,6 +53,7 @@ router.post("/posts", (req, res) => {
 
 router.post("/posts/:id/comments", (req, res) => {
   const commentInfo = { ...req.body, post_id: req.params.id };
+  console.log(commentInfo);
   Posts.insertComment(commentInfo)
     .then((comment) => {
       res.status(201).json(comment);
@@ -94,7 +95,7 @@ router.delete("/posts/:id", (req, res) => {
 //res 400 if user does not enter title or contents to update
 //if works respond with 200 and update request
 //if does not work res with 500 for could not be modified
-router.put("/:id", (req, res) => {
+router.put("/posts/:id", (req, res) => {
   const update = req.body;
   const id = req.params.id;
 
