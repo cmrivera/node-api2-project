@@ -7,14 +7,16 @@
   "scripts": {
     "server": "nodemon index.js",
     "start": "node index.js",
-    "watch": "nodemon index.js"
+    "watch": "nodemon --require dotenv/config index.js"
   },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "knex": "^0.21.2",
     "sqlite3": "^5.0.0"
   },
   "devDependencies": {
-    "nodemon": "^2.0.4"
+    "nodemon": "^2.0.4",
+    "dotenv": "^8.2.0"
   }
 }
